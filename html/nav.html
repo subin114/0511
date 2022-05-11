@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+
+	<style>
+
+		* {margin:0; box-sizing: border-box;}
+		ul,li,ol {list-style:none; margin: 0; padding:0;}
+
+
+
+
+
+
+
+		@media(max-width: 599px) {
+
+			header {width: 100%; height: 50px; position: absolute; left:0; top:0; z-index: 3; font-family: 'Oswald', sans-serif; background-color: cadetblue;}
+			.small img {width: 16px; height: 17px;}
+
+			header .small {display: flex; align-items: center; justify-content: space-between; line-height: 40px; display: flex; justify-content: space-between; margin: 10px;}
+			nav li a{text-decoration: none; padding:15px; color:#333; display: block;}
+			nav ul {background-color: #fff; text-align: center;}
+			nav ul a:hover {text-decoration: underline;}
+
+			nav button {background-color: #dfa25f; color: #fff; border: 0; border-radius: 40px; padding: 10px 24px; height: 40px; line-height: 20px; font-size: 13px; font-family: 'Karla', sans-serif; margin: 20px 0px;}
+			nav button:hover {background-color: #212c40; transition: 0.5s; cursor: pointer;}
+
+			.a:hover {cursor: pointer;}
+			.b {display: none;}
+			.b ul {padding: 0 15px;}
+			.b li {border-bottom: 1px solid #ddd;}
+			.b #home a {color: #dfa25f;}
+
+			/*로고*/
+			.logo {font-size: 18px; float: left; margin: 2px 6px; color: #fff; font-weight: 500;}
+			.logo a {text-decoration: none;}
+			#logo1 {color: #dfa25f;}
+			#logo2 {color: #fff;}
+		}
+
+
+
+
+
+
+		@media(min-width: 600px) {
+			header {width: 100%; height: 50px; position: absolute; left:0; top:0; z-index: 3; font-family: 'Oswald', sans-serif; background-color: darkblue;}
+			.small img {width: 16px; height: 17px;}
+
+			header .small {display: flex; align-items: center; justify-content: space-between; line-height: 40px; display: flex; justify-content: space-between; margin: 10px;}
+			nav li a{text-decoration: none; padding:15px; color:#333; display: block;}
+			nav ul {background-color: #fff; text-align: center;}
+			nav ul a:hover {text-decoration: underline;}
+
+			nav button {background-color: #dfa25f; color: #fff; border: 0; border-radius: 40px; padding: 10px 24px; height: 40px; line-height: 20px; font-size: 13px; font-family: 'Karla', sans-serif; margin: 20px 0px;}
+			nav button:hover {background-color: #212c40; transition: 0.5s; cursor: pointer;}
+
+			.a:hover {cursor: pointer;}
+			.b {display: none;}
+			.b ul {padding: 0 15px;}
+			.b li {border-bottom: 1px solid #ddd;}
+			.b #home a {color: #dfa25f;}
+
+			/*로고*/
+			.logo {font-size: 18px; float: left; margin: 2px 6px; color: #fff; font-weight: 500;}
+			.logo a {text-decoration: none;}
+			#logo1 {color: #dfa25f;}
+			#logo2 {color: #fff;}
+		}
+
+
+
+
+
+
+
+		@media(min-width: 1000px) {
+			header {width: 100%; height: 80px; margin: 13px auto 0px; padding: 20px 0px; z-index: 3; position:absolute; font-family: 'Oswald', sans-serif; display: flex; justify-content: space-around; background-color: darkmagenta;}
+
+
+
+/*로고*/
+.logo {font-size: 22px; float: left; height: 40px; margin: 2px 6px; color: #fff; font-weight: 500;}
+#logo1 {color: #dfa25f;}
+#logo2 {color: #fff;}
+.logo a {text-decoration: none;}
+
+
+nav {background: transparent; width:478px; height:40px;}
+nav ul { display: flex; background: transparent;}
+nav li a{text-decoration: none; padding:15px; color:#666; }
+.b {display: block;}
+.a{ display: none;}
+
+
+
+/*네비게이션
+nav {width:478px; height:40px; float: right;}
+nav > ul {font-size:14px;}
+nav > ul > li {float:left; margin:10px 15px;}
+nav > ul > li > a {text-decoration:none; color:#fff; font-family: 'Oswald', sans-serif;}
+nav > ul > li > a:hover {text-decoration: underline; color: #E0A25F; transition: 0.5s;}*/
+
+.navcolor1 {color: #E0A25F;}
+
+nav button {background-color: #dfa25f; color: #fff; border: 0; border-radius: 40px; padding: 10px 24px; height: 40px; line-height: 20px; margin-left: 20px; font-size: 13px; font-family: 'Karla', sans-serif;}
+nav button:hover {background-color: #212c40; transition: 0.5s; cursor: pointer;}
+}
+
+</style>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+<script>
+
+	$(function(){
+		$(".a").click(function(){
+			$(".b").slideToggle();
+		});
+	});
+
+
+	$(window).resize(function(){
+		if(window.innerWidth>=1000){
+			$('.b').show();
+		}
+		if(window.innerWidth<=999){
+			$('.b').hide();
+		}
+	});
+
+</script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+	<header>
+
+		<div class="small">
+			<div class="logo">
+				<a href="index.html" target="_self">
+					<span id="logo1">DELICIOUS</span> <span id="logo2">CAFÉ</span>
+				</a>
+			</div>
+
+			<img src="img/hamburgar.png" class="a">
+		</div>
+
+		<nav class="b">
+			<ul>
+				<li id="home"><a href="#">HOME</a></li>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">BLOG</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<button>Reservation</button>
+			</ul>
+			
+		</nav>
+
+	</header>
+
+
+</body>
+</html>
